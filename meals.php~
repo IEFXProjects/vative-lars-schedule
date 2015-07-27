@@ -1,0 +1,72 @@
+<?php
+	$Breakfast= $_POST[Breakfast];
+	$act4=$4_Post[act];
+	$Btime= $_POST[Btime];
+	$chooseBMH=$_Post[BMH];
+	$Lunch= $_POST[Lunch];
+	$Ltime= $_POST[Ltime];
+	$chooseLMH=$_POST[LMH];
+	$Dinner= $_POST[Dinner];
+	$Dtime= $_POST[Dtime];
+	$chooseDMH=$_POST[DMH];
+	$Snacks= $_POST[Snacks];
+	$Stime= $_POST[Stime];
+	//converts form data to variables
+
+
+// Transform hours like "1:45" into the total number of minutes, "105". 
+function hoursToMinutes($hours) 
+{ 
+    $minutes = 0; 
+    if (strpos($hours, ':') !== false) 
+    { 
+        // Split hours and minutes. 
+        list($hours, $minutes) = explode(':', $hours); 
+    } 
+    return $hours * 60 + $minutes; 
+} 
+
+
+
+// Transform minutes like "105" into hours like "1:45". 
+function minutesToHours($minutes) 
+{ 
+    $hours = (int)($minutes / 60); 
+    $minutes -= $hours * 60; 
+    return sprintf("%d:%02.0f", $hours, $minutes); 
+} 
+
+	if($_SERVER["REQUEST_METHOD"] == "POST"){
+	$act1=test_input($_POST["act1"])
+}//End of function hoursToMinutes
+
+
+	
+	$conn = new mysqli($servername, $DBusername, $DBpassword, $DBname);
+	//connects to the database based on the variables defined in the first lines
+	if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+	}
+	$Breakfast = mysqli_real_escape_string($conn, $Breakfast);
+	$Btime = mysqli_real_escape_string($conn, $Btime);
+	$chooseBMH = mysqli_real_escape_string($conn, $BMH);
+	$Lunch = mysqli_real_escape_string($conn, $Lunch);
+	$Ltime = mysqli_real_escape_string($conn, $Ltime);
+	$chooseLMH = mysqli_real_escape_string($conn, $LMH);
+	$Dinner = mysqli_real_escape_string($conn, $Dinner);
+	$Dtime = mysqli_real_escape_string($conn, $Dtime);
+	$chooseDMH = mysqli_real_escape_string($conn, $DMH);
+	$Snacks= mysqli_real_escape_string($conn, $Snacks);
+	//prevents sql injection attacks by removing special characters
+	
+	
+	
+	$sql= "INSERT INTO Events (Breakfast, Btime, chooseBMH, Lunch, Ltime, chooseLMH, Dinner, Dtime, chooseDMH, Dtime) VALUES('$Breakfast', '$Btime', '$chooseBMH', '$Lunch', '$Ltime', '$chooseLMH', '$Dinner', '$Dtime', '$chooseDMH', '$Snacks')";
+	//pushes refined data to database table based on header values
+	if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+	} else {
+		echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+	mysqli_close($conn);
+	?> 
