@@ -1,3 +1,34 @@
+table { 
+color: #333;
+font-family: Helvetica, Arial, sans-serif;
+width: 640px; 
+border-collapse: 
+collapse; border-spacing: 0; 
+}
+
+td, th { 
+border: 1px solid transparent; /* No more visible border */
+height: 30px; 
+transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+th {
+background: #70968C;  /* Darken header a bit */
+font-weight: bold;
+}
+
+td {
+background: #FAFAFA;
+text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */ 
+tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */ 
+tr:nth-child(odd) td { background: #FEFEFE; }  
+
+tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
 body{
   margin:40px 0;
   background:#203542;
@@ -20,7 +51,7 @@ ul{
   background:#3e5b70;
   list-style-type:none;
 }
-li{
+li.header{
   width:100px;height:100px;border-radius:50px;font-size:20px;color:#fff;line-height:100px;text-align:center;background:#000
   margin:10px;
   background:#70968C;
@@ -31,8 +62,29 @@ li{
   display:block;
   padding:15px;
   color:inherit;
-  ]text-decoration:none;
+  text-decoration:none;
 }
-li:hover{
+li.header:hover{
   opacity:0.2;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+	margin-top:20px;
+	
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+table{
+text-align:center;
+float:center;
+margin-top:50px;
+
+}
+.tableContainer{
+text-align:center;
+margin-right:auto;
+margin-left:auto;
 }
