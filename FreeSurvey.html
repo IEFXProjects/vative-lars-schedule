@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,37 +40,28 @@
   text-align: center;
   margin: auto;
 }
-
 body{
   background-color: #ffb6c1;
 }
-
 input[name="time"]{
   width: 40px;
 }
-
 input[class="Acts"]{
   text-align: left;
 }
-
 h1{
   text-align: center;
 }
-
 h4{
   display: inline-block;
 }
-
 h5{
   display: inline-block;
   font-size: 20px;
 }
-
-
 br{
   height: 100px;
 }
-
 .progress{
   width: 1300px;
   margin: auto;
@@ -80,11 +72,10 @@ br{
   <script>
   //Hide to fade in later
 $('#ActivityInputs').hide();
-
 $(document).ready(function() {
   
   //Creates Activities option
-    $('#ActivitySelect').append('<h3>Activities</h3> How many Activities will you list? <select name="chooseActnum" class="nums" id = "Actnums"><option selected="selected">1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option></select> <br><br> <form>Activity 1: <input type = "text" name= "Act1" class = "Acts"><br>       Time: <input type = "text" name= "time" id = "a1Time"> <select name="chooseMH" class="MH" id = "MHa1"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>');
+    $('#ActivitySelect').append('<h3>Activities</h3> How many Activities will you list? <select name="chooseActnum" class="nums" id = "Actnums"><option selected="selected">1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option></select> <br><br> <form method="Post" action="FreeTime.php">Activity 1: <input type = "text" name= "Act1" class = "Acts"><br>       Time: <input type = "text" name= "time" id = "a1Time"> <select name="chooseMH" class="MH" id = "MHa1"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select> <input type="submit" name="submit" value="Submit"></form>');
   
   for (var i= 2; i<=20; i++)
     {
@@ -153,7 +144,6 @@ $(document).ready(function() {
   $('#a1Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa1').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar1').animate({width: x*hours});
@@ -168,7 +158,6 @@ $(document).ready(function() {
   $('#MHa1').change(function(){
     var y = $(this).val();
     var x = $('#a1Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar1').animate({width: x*hours});
@@ -183,7 +172,6 @@ $(document).ready(function() {
   $('#a2Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa2').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar2').animate({width: x*hours});
@@ -198,7 +186,6 @@ $(document).ready(function() {
   $('#MHa2').change(function(){
     var y = $(this).val();
     var x = $('#a2Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar2').animate({width: x*hours});
@@ -213,7 +200,6 @@ $(document).ready(function() {
   $('#a3Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa3').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar3').animate({width: x*hours});
@@ -228,7 +214,6 @@ $(document).ready(function() {
   $('#MHa3').change(function(){
     var y = $(this).val();
     var x = $('#a3Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar3').animate({width: x*hours});
@@ -243,7 +228,6 @@ $(document).ready(function() {
   $('#a4Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa4').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar4').animate({width: x*hours});
@@ -258,7 +242,6 @@ $(document).ready(function() {
   $('#MHa4').change(function(){
     var y = $(this).val();
     var x = $('#a4Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar4').animate({width: x*hours});
@@ -273,7 +256,6 @@ $(document).ready(function() {
   $('#a5Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa5').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar5').animate({width: x*hours});
@@ -288,7 +270,6 @@ $(document).ready(function() {
   $('#MHa5').change(function(){
     var y = $(this).val();
     var x = $('#a5Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar5').animate({width: x*hours});
@@ -303,7 +284,6 @@ $(document).ready(function() {
   $('#a6Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa6').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar6').animate({width: x*hours});
@@ -318,7 +298,6 @@ $(document).ready(function() {
   $('#MHa6').change(function(){
     var y = $(this).val();
     var x = $('#a6Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar6').animate({width: x*hours});
@@ -333,7 +312,6 @@ $(document).ready(function() {
   $('#a7Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa7').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar7').animate({width: x*hours});
@@ -348,7 +326,6 @@ $(document).ready(function() {
   $('#MHa7').change(function(){
     var y = $(this).val();
     var x = $('#a7Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar7').animate({width: x*hours});
@@ -363,7 +340,6 @@ $(document).ready(function() {
   $('#a8Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa8').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar8').animate({width: x*hours});
@@ -378,7 +354,6 @@ $(document).ready(function() {
   $('#MHa8').change(function(){
     var y = $(this).val();
     var x = $('#a8Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar8').animate({width: x*hours});
@@ -393,7 +368,6 @@ $(document).ready(function() {
   $('#a9Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa9').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar9').animate({width: x*hours});
@@ -408,7 +382,6 @@ $(document).ready(function() {
   $('#MHa9').change(function(){
     var y = $(this).val();
     var x = $('#a9Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar9').animate({width: x*hours});
@@ -423,7 +396,6 @@ $(document).ready(function() {
   $('#a10Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa10').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar10').animate({width: x*hours});
@@ -438,7 +410,6 @@ $(document).ready(function() {
   $('#MHa10').change(function(){
     var y = $(this).val();
     var x = $('#a10Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar10').animate({width: x*hours});
@@ -453,7 +424,6 @@ $(document).ready(function() {
   $('#a11Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa11').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar11').animate({width: x*hours});
@@ -468,7 +438,6 @@ $(document).ready(function() {
   $('#MHa11').change(function(){
     var y = $(this).val();
     var x = $('#a11Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar11').animate({width: x*hours});
@@ -483,7 +452,6 @@ $(document).ready(function() {
   $('#a12Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa12').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar12').animate({width: x*hours});
@@ -498,7 +466,6 @@ $(document).ready(function() {
   $('#MHa12').change(function(){
     var y = $(this).val();
     var x = $('#a12Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar12').animate({width: x*hours});
@@ -513,7 +480,6 @@ $(document).ready(function() {
   $('#a13Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa13').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar13').animate({width: x*hours});
@@ -528,7 +494,6 @@ $(document).ready(function() {
   $('#MHa13').change(function(){
     var y = $(this).val();
     var x = $('#a13Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar13').animate({width: x*hours});
@@ -543,7 +508,6 @@ $(document).ready(function() {
   $('#a14Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa14').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar14').animate({width: x*hours});
@@ -558,7 +522,6 @@ $(document).ready(function() {
   $('#MHa14').change(function(){
     var y = $(this).val();
     var x = $('#a14Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar14').animate({width: x*hours});
@@ -573,7 +536,6 @@ $(document).ready(function() {
   $('#a15Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa15').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar15').animate({width: x*hours});
@@ -588,7 +550,6 @@ $(document).ready(function() {
   $('#MHa15').change(function(){
     var y = $(this).val();
     var x = $('#a15Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar15').animate({width: x*hours});
@@ -603,7 +564,6 @@ $(document).ready(function() {
   $('#a16Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa16').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar16').animate({width: x*hours});
@@ -618,7 +578,6 @@ $(document).ready(function() {
   $('#MHa16').change(function(){
     var y = $(this).val();
     var x = $('#a16Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar16').animate({width: x*hours});
@@ -633,7 +592,6 @@ $(document).ready(function() {
   $('#a17Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa17').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar17').animate({width: x*hours});
@@ -648,7 +606,6 @@ $(document).ready(function() {
   $('#MHa17').change(function(){
     var y = $(this).val();
     var x = $('#a17Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar17').animate({width: x*hours});
@@ -663,7 +620,6 @@ $(document).ready(function() {
   $('#a18Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa18').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar18').animate({width: x*hours});
@@ -678,7 +634,6 @@ $(document).ready(function() {
   $('#MHa18').change(function(){
     var y = $(this).val();
     var x = $('#a18Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar18').animate({width: x*hours});
@@ -693,7 +648,6 @@ $(document).ready(function() {
   $('#a19Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa19').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar19').animate({width: x*hours});
@@ -708,7 +662,6 @@ $(document).ready(function() {
   $('#MHa19').change(function(){
     var y = $(this).val();
     var x = $('#a19Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar19').animate({width: x*hours});
@@ -723,7 +676,6 @@ $(document).ready(function() {
   $('#a20Time').change(function(){
     var x = $(this).val();
     var y = $('#MHa20').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar20').animate({width: x*hours});
@@ -738,7 +690,6 @@ $(document).ready(function() {
   $('#MHa20').change(function(){
     var y = $(this).val();
     var x = $('#a20Time').val();
-
     if(y == 'Hour(s)')
     {
     $('#abar20').animate({width: x*hours});
@@ -786,6 +737,6 @@ $(document).ready(function() {
   })(); //end of function
 });
   </script>
-  
+ 
 </body>
 </html>
