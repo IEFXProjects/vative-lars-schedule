@@ -1,3 +1,4 @@
+/*This is the css for the To Do List and Have Done List*/
 table { 
 color: #333;
 font-family: Helvetica, Arial, sans-serif;
@@ -29,6 +30,9 @@ tr:nth-child(even) td { background: #F1F1F1; }
 tr:nth-child(odd) td { background: #FEFEFE; }  
 
 tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
+
+/*This is the end of the table css*/
+
 body{
   margin:40px 0;
   background:#203542;
@@ -68,7 +72,7 @@ li.header:hover{
   opacity:0.2;
 }
 table, th, td {
-    border: 1px solid black;
+ 
     border-collapse: collapse;
 	margin-top:20px;
 	
