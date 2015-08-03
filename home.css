@@ -65,10 +65,10 @@ tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
   height: 750px;
 }
 
-ul {
+  ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;  
+  margin: 0px;
+  padding: 0px;  
   background-color: #636368;
   overflow: hidden; 
   }
@@ -97,7 +97,7 @@ color:white;
 .work{
   display: inline;
   float: left;
-  margin-left: 100px;
+  margin-left: 40px;
   color:white;
 } 
 
