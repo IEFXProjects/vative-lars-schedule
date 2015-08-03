@@ -65,7 +65,7 @@ input[name="length"]{
   </style>
   
   <script>
-  //Hide to fade in later
+//Hide to fade in later
 $('#DoYouKnowForm').hide();
 $('#SelectForm').hide();
 $('#InputForm').hide();
@@ -87,15 +87,17 @@ $(document).ready(function() {
     //Creates option for more class times
     $('#OccurForm1').append('<form>How many different times?<select name="occur1" class = "numxT1"> <option selected="selected">1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></form>');
   
-  //Creates form for more class times
-  function moreTimes (x, y){
-    var v = x;
   
   for (var i= 2; i<=20; i++)
     {
       $('#InputForm').append('<br> <form class = timeForm'+i+'>Class '+i+': <input type = "text" name = "className'+i+'"></input><br> Does it occur at different times during the week?<input type="radio" name = "occurance'+i+'" value="yes">Yes <input type="radio" name = "occurance'+i+'" value="no">No <div id = "OccurForm'+i+'"></div> <br> <div id = "xtraTime'+i+'"></div><br>Start Time: <input type = "text" name= "s'+i+'one" class = "halftime s'+i+'one"> : <input type = "text" name= "s'+i+'two" class = "halftime s'+i+'two"><select name="start'+i+'AP" id = "AP" class = start'+i+'AP> <option selected="selected">am</option><option>pm</option></select><br> End Time: <input type = "text" name= "e'+i+'one" class = "halftime e'+i+'one"> : <input type = "text" name= "e'+i+'two" class = "halftime e'+i+'two"><select name="end'+i+'AP" id = "AP" class = end'+i+'AP> <option selected="selected">am</option><option>pm</option></select><br> Mon<input type="checkbox" name="mon'+i+'" value="Mon">Tue<input type="checkbox" name="tue'+i+'" value="Tue">Wed<input type="checkbox" name="wed'+i+'" value="Wed">Thu<input type="checkbox" name="thu'+i+'" value="Thu">Fri<input type="checkbox" name="fri'+i+'" value="Fri">Sat<input type="checkbox" name="sat'+i+'" value="Sat">Sun<input type="checkbox" name="sun'+i+'" value="Sun"></form>');
       $('#OccurForm'+i).append('<form>How many different times?<select name="occur'+i+'" class = "numxT'+i+'"> <option selected="selected">1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></form>');
     }
+    
+  
+  //Creates form for more class times
+  function moreTimes (x, y){
+    var v = x;
     
     for (var d= y; d<=(y+9); d++)
     {
@@ -394,61 +396,17 @@ $(document).ready(function() {
     }
     
     //inputs for all 20 classes
-    /*for (var t = 1; t<=20; t++)
+    for (var t = 1; t<=20; t++)
       {
         inputs(t);
-      }*/
+      }
     
     
     //-------------0 Input (IdkForm)-----------------
-  $('#IdkForm').change(function(){
-    var v = 0;
-    var boxCount = 0;
-      if ($('input[name=mon'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-      
-      if ($('input[name=tue'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-
-      if ($('input[name=wed'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-      
-      if ($('input[name=thu'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-
-      if ($('input[name=fri'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-      
-      if ($('input[name=sat'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-
-      if ($('input[name=sun'+v+']').is(':checked'))
-        {
-          boxCount = boxCount+1;
-        }
-    
-    var x = $("input[name=length]").val();
-    var y = $("#MH0").val();
-    if(y == '1')
-    {
-    $("#bar0").animate({width: (x*mins)*boxCount});
-    }
-    else if (y == '2')
-      {
-        $("#bar0").animate({width: (x*hours)*boxCount});
-      }
+  $('#Classnums').change(function(){
+    var classCount = $(this).val();
+ 
+    $("#bar0").animate({width: (hours)*classCount});
   });
     
     
@@ -467,7 +425,7 @@ $(document).ready(function() {
             
             $('.timeForm'+num).fadeIn();
           }
-          for (var n = 0; n <= num; n++)
+          for (var n = 1; n <= num; n++)
           {
             $('.timeForm'+n).fadeIn();
             $("#bar"+n).fadeIn();

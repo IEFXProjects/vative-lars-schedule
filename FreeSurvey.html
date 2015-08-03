@@ -44,7 +44,7 @@
   
   
     <form id = "ActivitySelect"></form>
-    <form id = "ActivityInputs">Activity 1: <input type = "text" name= "Act1" class = "Acts"><br>       Time: <input type = "text" name= "time" id = "a1Time"> <select name="chooseMH" class="MH" id = "MHa1"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select><div id = "activities2to20"></div></form>
+    <form id = "ActivityInputs">Activity 1: <input type = "text" name= "Act1" class = "Acts"><br>       Time: <input type = "text" name= "time1" id = "a1Time"> <select name="chooseMH1" class="MH" id = "MHa1"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select><div id = "activities2to20"></div></form>
   
   
   <style>
@@ -126,7 +126,7 @@ $(document).ready(function() {
   
   for (var i= 2; i<=20; i++)
     {
-      $('#activities2to20').append('<br> <form class = a' +i+ '>Activity ' +i+ ': <input type = "text" name= "Act' +i+ '" class = "Acts"><br>    Time: <input type = "text" name= "time" id = "a'+i+'Time"> <select name="chooseMH" class="MH" id = "MHa'+i+'"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>');
+      $('#activities2to20').append('<br> <form class = a' +i+ '>Activity ' +i+ ': <input type = "text" name= "Act' +i+ '" class = "Acts"><br>    Time: <input type = "text" name= "time'+i+'" id = "a'+i+'Time"> <select name="chooseMH'+i+'" class="MH" id = "MHa'+i+'"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>');
     }
   
   for (var r= 1; r<=20; r++)
