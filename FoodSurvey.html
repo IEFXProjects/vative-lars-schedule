@@ -18,12 +18,17 @@
 <body>
 <ul class="nav">
   	<a href="home.html"><li><img src="HomeReal.png" alt="Home" width="30px" height="30px"></li></a>
-    <li><a href="Classes.html"<div>Classes</div></a></li>
+    <li><a href="ClassSurvey.html"<div>Classes</div></a></li>
     <li><a href="FoodSurvey.html"><div>Food</div></a></li>
     <li><a href="FreeSurvey.html"<div>Free Time</div></a></li>
     <li><a href="Transportation.html"><div>Transportation</div></a></li>
+<<<<<<< HEAD
     <li><a href="Work.html"<div>Work</div></a></li>
     <li><a href="PersonalHygieneSurvey.html"><div>Hygiene</div></a></li>
+=======
+    <li><a href="WorkSurvey.html"<div>Work</div></a></li>
+    <li><a href="HygieneSurvey.html"><div>Hygiene</div></a></li>
+>>>>>>> 1faa2ed4137ebb0e26519eec4e73145faac67188
   </ul>
   
    <h1><div>Food</div></h1>
@@ -61,36 +66,39 @@
     <div class="col-md-6">
   <h2 id = "timeSpent" class="right">How much time a day do you spend on:</h2>
   
-  <form id = "breakfastForm">    
+  <form method="POST" action="Meals.php" id = "breakfastForm">    
     <span title = "Examples">Breakfast</span>? 
-    <input type = "text" name= "time" id = "breakfastInput">
+    <input type = "text" name= "time1" id = "breakfastInput">
     
     <select name="chooseMH" class="MH" id = "MHb">
       <option selected="selected">Minute(s)</option>
       <option>Hour(s)</option>
     </select>
+<input type="submit" name="submit" value="submit">
     <p></p>
   </form>
   
-  <form id ="lunchForm">    
+  <form method="POST" action="Meals.php" id ="lunchForm">    
     <span title = "Examples">Lunch</span>? 
-    <input type = "text" name= "time" id = "lunchInput">
+    <input type = "text" name= "time2" id = "lunchInput">
   
     <select name="chooseMH" class="MH" id = "MHl">
       <option selected="selected">Minute(s)</option>
       <option>Hour(s)</option>
     </select>
+<input type="submit" name="submit" value="submit">
     <p></p>
   </form>
     
-  <form id = "dinnerForm">    
+  <form method="POST" action="Meals.php" id = "dinnerForm">    
     <span title = "Examples">Dinner</span>?
-    <input type = "text" name= "time" id = "dinnerInput">
+    <input type = "text" name= "time3" id = "dinnerInput">
   
     <select name="chooseMH" class="MH" id = "MHd">
       <option selected="selected">Minute(s)</option>
       <option>Hour(s)</option>
     </select>
+	<input type="submit" name="submit" value="submit">
     <p></p>
     <br>
      <br>
@@ -225,7 +233,7 @@ $(document).ready(function() {
   
   for (var i= 2; i<=10; i++)
     {
-      $('#snackInputs').append('<br> <form class = s' +i+ '>Snack ' +i+ ': <input type = "text" name= "snack' +i+ '" class = "snacks"><br>  Time: <input type = "text" name= "time" id = "s'+i+'Time"> <select name="chooseMH" class="MH" id = "MHs'+i+'"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>');
+      $('#snackInputs').append('<br> <form class = s' +i+ '>Snack ' +i+ ': <input type = "text" name= "snack' +i+ '" class = "snacks"><br>  Time: <input type = "text" name= "time" id = "s'+i+'Time"> <select name="chooseMH" class="MH'+i+ '" id = "MHs'+i+'"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>');
     }
   
   for (var r= 1; r<=10; r++)

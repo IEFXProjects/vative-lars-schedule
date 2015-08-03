@@ -1,26 +1,27 @@
-<?php	
+<?php
 	require 'functions2.php';
 	sessionpage();
 	retrieveUserInfo();
 	UserSchedule($UniqueUser);
-	$Work= $_POST[Work];
-	$halftime= $_POST[halftime2];
-	$Snacks= $_POST[Snacks];
-	$image= $_POST[image];
+	$FreeTImeOption=$_POST['FreeTime'];
+	$chooseActnum=$_Post['chooseActnum'];
+	$chooseMH=$_Post['chooseMH'];
+
+	$count=0;
+	$Act= array("1"=>"Act1","2"=>"Act2");
+	while($count<=$chooseActnum){
+		$Act[$count]=array($_POST['"Act" . ($count+1)'], $_POST['"time" . ($count+1)']);
+		$count=($count+1);
+	}
+	
+	$Act = mysqli_real_escape_string($conn2, $Act);
+	$sql="INSERT INTO Events(Act) VALUES('$Act')";
+	if ($conn2->query($sql)===TRUE){
+	header("Location:https://web125.secure-secure.co.uk/peerphinder.com/schedule/home.html");
+	}
+	else{
+	die("Connection failed dummy" . $conn2->connect_error);
+	}
 	//converts form data to variables
-	
-
-	//tests to see if the user inputed a valid email...if they did it will do nothing...if they did not it will end the script
-	//all of the if statements test to make sure the user inputed the form data correctly
-	
-	$servername = "localhost";
-	$DBusername = "cl29-vative";
-	$DBpassword = "f4V-NrKV8";
-	$DBname = "cl29-vative";
-	
-	
-	
-	$username = mysqli_real_escape_string($conn, $username);
-	$Work = mysqli_real_escape_string($conn, $Work);
-
 	mysqli_close($conn2);
+	?>

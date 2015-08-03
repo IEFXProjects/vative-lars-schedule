@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>Transportation</title>
+<link type="text/css" rel="stylesheet" href="NavBar.css">
+</head>
+<body>
+
+<ul class="nav">
+  	<a href="home.html"><li class="work"><img src="HomeReal.png" alt="Home" width="30px" height="30px"></li></a>
+    <li class="work"><a href="ClassSurvey.html"><div>Classes</div></a></li>
+    <li class="work"><a href="FoodSurvey.html"><div>Food</div></a></li>
+    <li class="work"><a href="FreeSurvey.html"><div>Free Time</div></a></li>
+    <li class="work"><a href="TransportationSurvey.html"><div>Transportation</div></a></li>
+    <li class="work"><a href="WorkSurvey.html"><div>Work</div></a></li>
+    <li class="work"><a href="HygieneSurvey.html"><div>Hygiene</div></a></li>
+  </ul>
+
+  <h1>Transportation</h1>
+  
+  <!--Yes/No-->
+  <form>
+    <h4>Would you like to leave time for transportation in your schedule?</h4>
+    <input type="radio" name = "Transportation" value="yes">Yes
+    <input type="radio" name = "Transportation" value="no">No
+    <br>
+  </form>
+  
+  <!--Bootstrap Progress Bar-->    
+    <h4 id = "yourday">Your Week</h4>
+    <div class="progress progress-striped"></div>
+  
+  
+    <form id = "TransForm"><h4>How much time per week?</h4><input type = "text" name= "time" id = "time"> <select name="chooseMH" id = "MH"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>
+  
+  <style>
+  input[name="time"]{
+  width: 40px;
+  text-align: center;
+}
+  </style>
+  
+  <script>
+  //Hide to fade in later
+$('#TransForm').hide();
+
+$(document).ready(function() { 
+  
+    // Conversions for progress bar
+    var hours = (1/168)*($('.progress').width());
+    var mins = (1/10080)*($('.progress').width());
+  
+  $('.progress').append('<div class="progress-bar progress-bar-custom active" id = "bar1" style="width: 0%; background: rgba(135, 160, 80, 1);"><span class="sr-only">10% Complete</span></div>');
+  
+  $('input[name=Transportation]').change(function(){
+    if ($(this).val() == 'yes')
+      {
+        $('#TransForm').fadeIn();
+        if ($('#MH').val() == 'Minute(s)')
+          {
+            $('#bar1').animate({width: $('#time').val()*mins});
+          }
+        else
+          {
+            $('#bar1').animate({width: $('#time').val()*hours});
+          }
+      }
+    else if ($(this).val() == 'no')
+      {
+        $('#TransForm').fadeOut();
+        $('#bar1').animate({width: 0});
+      }
+  });
+  
+  $('input[name=time]').change(function(){
+    if ($('#MH').val() == 'Minute(s)')
+      {
+        $('#bar1').animate({width: $('#time').val()*mins});
+      }
+    else
+      {
+        $('#bar1').animate({width: $('#time').val()*hours});
+      }
+  });
+  
+  $('#MH').change(function(){
+    if ($('#MH').val() == 'Minute(s)')
+      {
+        $('#bar1').animate({width: $('#time').val()*mins});
+      }
+    else
+      {
+        $('#bar1').animate({width: $('#time').val()*hours});
+      }
+  });
+});
+  </script>
+  
+</body>
+</html>
