@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f7e5442931e16d7726b44897262d04765a2f8519
 /*This is the css for the To Do List and Have Done List*/
 table { 
 color: #333;
@@ -57,7 +60,11 @@ tr:nth-child(odd) td { background: #FEFEFE; }
 tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
 
 /*This is the end of the table css*/
+<<<<<<< HEAD
 
+=======
+<--Doctype-->
+>>>>>>> f7e5442931e16d7726b44897262d04765a2f8519
   .money{
   margin:0px;
   background:#203542;
@@ -66,10 +73,17 @@ tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
   height: 750px;
 }
 
+<<<<<<< HEAD
   ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;  
+=======
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;  
+>>>>>>> f7e5442931e16d7726b44897262d04765a2f8519
   background-color: #636368;
   overflow: hidden; 
   }
@@ -98,10 +112,18 @@ color:white;
 .work{
   display: inline;
   float: left;
+<<<<<<< HEAD
   margin-left: 40px;
+=======
+  margin-left: 100px;
+>>>>>>> f7e5442931e16d7726b44897262d04765a2f8519
   color:white;
 } 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 1faa2ed4137ebb0e26519eec4e73145faac67188
+=======
+
+>>>>>>> f7e5442931e16d7726b44897262d04765a2f8519
