@@ -56,7 +56,7 @@ tr:nth-child(odd) td { background: #FEFEFE; }
 tr td:hover { background: #666; color: #FFF; } /* Hover cell effect! */
 
 /*This is the end of the table css*/
-
+<--Doctype-->
   .money{
   margin:0px;
   background:#203542;
