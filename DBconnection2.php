@@ -1,5 +1,5 @@
 <?php
-	global $servername, $DBusername, $DBpassword, $DBname, $conn;
+	global $servername, $DBusername, $DBpassword, $DBname, $conn2;
 	$servername = "localhost";
 	$DBusername = "cl29-vative";
 	$DBpassword = "f4V-NrKV8";
