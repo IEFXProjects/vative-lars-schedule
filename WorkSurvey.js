@@ -1,74 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-  
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <meta charset="utf-8">
-  <title>Work</title>
-<link type="text/css" rel="stylesheet" href="NavBar.css">
-</head>
-<body>
-<ul class="nav">
-  	<a href="home.html"><li class="work"><img src="HomeReal.png" alt="Home" width="30px" height="30px"></li></a>
-    <li class="work"><a href="Classes.html"><div>Classes</div></a></li>
-    <li class="work"><a href="FoodSurvey.html"><div>Food</div></a></li>
-    <li class="work"><a href="FreeSurvey.html"><div>Free Time</div></a></li>
-    <li class="work"><a href="TransportationSurvey.html"><div>Transportation</div></a></li>
-    <li class="work"><a href="WorkSurvey.html"><div>Work</div></a></li>
-    <li class="work"><a href="HygieneSurvey.html"><div>Hygiene</div></a></li>
-  </ul>
-
-  <h1>Work</h1>
-  
-  <!--Yes/No-->
-  <form id = "WorkForm">
-    <h4>Would you like to list work in your schedule?</h4> <h5>Your schedule can be formed even if you do not know your work times yet</h5>
-    <input type="radio" name = "Work" value="yes" id = "yesThis">Yes
-    <input type="radio" name = "Work" value="no" id = "noThis" checked>No
-    <br>
-  </form>
-    
-    <form id = "DoYouKnowForm"></form>
-  
   <!--Bootstrap Progress Bar-->    
     <h4 id = "yourday">Your Week</h4><div class="progress"></div>
   
     <form id = "SelectForm"></form>
     <form id = "InputForm"></form>  
     <form id = "IdkForm"></form>
-  
-  
-<style>
-  h1,h4,h5,h6,#WorkForm,#DoYouKnowForm,#SelectForm,#InputForm,#IdkForm{
-text-align:center;}
-.halftime{
-  width: 20px;
-  text-align: center;
-}
+  <input type="submit" value="Submit">
+</form>
 
-input[name="length"]{
-  width: 40px;
-  text-align: center;
-}
-
-#bar0{
-  opacity: .3
-}
-body{
- background-color:#D89FEB;
-}
-
-</style>
-  
   
   <script>
   //Hide to fade in later
@@ -460,6 +398,3 @@ $(document).ready(function() {
   })();
 });
   </script>
-  <input type="submit" value="submit">
-</body>
-</html>

@@ -1,4 +1,4 @@
-	<?php
+<?php
 	require 'functions2.php';
 	sessionpage();
 	retrieveUserInfo();
@@ -9,18 +9,12 @@
 	$Act= array();
 	$count=0;
 	while($count<=$chooseActnum){
-		$variable1= "Act" . ($count+1);
 		$variable2= "time" . ($count+1);
 		$variable3= "chooseMH" . ($count+1);
 		$Act[$count]= array($_POST[$variable1], $_POST[$variable2], $_POST[$variable3]);
-		array_push($Act, $Act[$count]);
+		array_push($Meals, $Act[$count]);
 		$count=$count+1;
 	}
-	//This creates an array for each event and adds it to the multidimensional array $Act
-	var_dump($chooseActnum);
-	print_r($_POST['Act1']);
-	print_r($POST['Act2']);
-	print_r($Act);
 	
 	require 'DBconnection2.php';
 	$count=0;
