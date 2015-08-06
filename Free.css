@@ -6,11 +6,12 @@
   margin: auto;
 }
 body{
-  background-color: #ff7575;
+  /*background-color: #ff7575;*/
+  background-color: white;
 }
 
 #whitebox{
-background-color: white;
+background-color: #ff7575;
 width: 90%;
 border-radius: 20px;
 
