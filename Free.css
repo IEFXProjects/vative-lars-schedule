@@ -8,6 +8,17 @@
 body{
   background-color: #ff7575;
 }
+
+#whitebox{
+background-color: white;
+width: 90%;
+border-radius: 20px;
+
+  -moz-box-shadow: 3px 4px 3px #ccc;
+  -webkit-box-shadow: 3px 4px 3px #ccc;
+  box-shadow: 10px 10px 5px grey;
+}
+
 input[name="time"]{
   width: 40px;
 }

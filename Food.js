@@ -1,9 +1,9 @@
- //Hide to fade in later
+$(document).ready(function() {
+   
+   //Hide to fade in later
 $('#snackSelect').hide();
 $('#snackInputs').hide();
 
-$(document).ready(function() {
-  
   //Creates Snacks option
     $('#snackSelect').append('<h3>Snacks</h3> How many Snacks will you list? <select name="chooseSnacknum" class="nums" id = "Snacknums"><option selected="selected">1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select> <br><br> <form>Snack 1: <input type = "text" name= "snack1" class = "snacks"><br>       Time: <input type = "text" name= "time" id = "s1Time"> <select name="chooseMH" class="MH" id = "MHs1"> <option selected="selected">Minute(s)</option><option>Hour(s)</option></select></form>');
   
