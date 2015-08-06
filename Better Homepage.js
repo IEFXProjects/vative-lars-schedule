@@ -13,7 +13,7 @@ $(document).ready(function(){
    });
   
   
-  
+  /*
    $('#login').click(function() {
        $('#signup').hide();
        $(this).animate({
@@ -33,5 +33,6 @@ $(document).ready(function(){
        });
        $('form').toggleClass('hidden');
    });
+   */
   
 });
