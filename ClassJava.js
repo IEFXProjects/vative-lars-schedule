@@ -1,11 +1,10 @@
-	//Hide to fade in later
+$(document).ready(function() {
+	
+//Hide to fade in later
 $('#DoYouKnowForm').hide();
 $('#SelectForm').hide();
 $('#InputForm').hide();
 $('#IdkForm').hide();
-
-$(document).ready(function() {
-	
 	
   for (var q= 2; q<=20; q++)
   {
