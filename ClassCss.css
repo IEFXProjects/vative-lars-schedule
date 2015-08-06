@@ -1,0 +1,10 @@
+body{
+background-color:#66E066;
+}
+form,h1,h4,h5,h6,input,.submit{
+text-align:center;
+}
+
+#bar0{
+  opacity: .3
+}
