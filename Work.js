@@ -1,21 +1,10 @@
-  <!--Bootstrap Progress Bar-->    
-    <h4 id = "yourday">Your Week</h4><div class="progress"></div>
-  
-    <form id = "SelectForm"></form>
-    <form id = "InputForm"></form>  
-    <form id = "IdkForm"></form>
-  <input type="submit" value="Submit">
-</form>
-
-  
-  <script>
-  //Hide to fade in later
+$(document).ready(function() {
+	
+//Hide to fade in later
 $('#DoYouKnowForm').hide();
 $('#SelectForm').hide();
 $('#InputForm').hide();
 $('#IdkForm').hide();
-
-$(document).ready(function() {
   
   $('#DoYouKnowForm').append('<h4>Do you know your work schedule?</h4><input type="radio" name = "idkWork" value="yes">Yes  <input type="radio" name = "idkWork" value="no">No<br>');
   
@@ -397,4 +386,3 @@ $(document).ready(function() {
   });
   })();
 });
-  </script>
