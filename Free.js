@@ -34,7 +34,7 @@ $('#activities2to20').hide();
     var yesOrNo = $('input[name=FreeTime]:checked').val();
     if (yesOrNo == 'no')
     {
-		$('#whitebox').animate({width: 0});
+		$('#box').animate({width: 0});
       $('#ActivitySelect').fadeOut('fast');
       $('#ActivityInputs').fadeOut('fast');
 	  //$('#whitebox').fadeOut('fast');
@@ -46,7 +46,7 @@ $('#activities2to20').hide();
     }
     else if (yesOrNo == 'yes')
      {
-		 $('#whitebox').animate({width: 1100});
+		 $('#box').animate({width: 700});
         $('#ActivitySelect').fadeIn('fast');
         $('#ActivityInputs').fadeIn('fast');
 		//$('#whitebox').fadeIn('fast');

@@ -1,12 +1,42 @@
+  *{
+  text-align: center;
+  margin: auto;
+  }
+
 form,h1,h4,h5,h6{
 text-align:center;
 }
 
 body{
-background-color:#ffa500;
+background-color:#e9e9e9;
 }
 
 .submit{
 text-align:center;
 margin-top:30px;
+}
+
+#box{
+background-color: #ffa500;
+width: 0;
+border-radius: 20px;
+
+  -moz-box-shadow: 3px 4px 3px #ccc;
+  -webkit-box-shadow: 3px 4px 3px #ccc;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.progress{
+  width: 1300px;
+  margin: auto;
+}
+
+input{
+  border: solid 3px #c9c9c9;
+  transition: border 0.2s;
+  padding: 2px;
+}
+input:focus{
+border: solid 3px #969696;
+outline: none;
 }

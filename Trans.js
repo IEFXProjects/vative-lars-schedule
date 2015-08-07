@@ -2,6 +2,7 @@ $(document).ready(function() {
   
     //Hide to fade in later
   $('#TransForm').hide();
+  $('#box').hide();
   
     // Conversions for progress bar
     var hours = (1/168)*($('.progress').width());
@@ -12,9 +13,11 @@ $(document).ready(function() {
   $('input[name=Transportation]').change(function(){
     if ($(this).val() == 'yes')
       {
-        $('#TransForm').fadeIn();
+		  $('#box').show();
+		  $('#box').animate({width: 700});
+        $('#TransForm').fadeIn('fast');
         if ($('#MH').val() == 'Minute(s)')
-          {
+		{
             $('#bar1').animate({width: $('#time').val()*mins});
           }
         else
@@ -24,7 +27,8 @@ $(document).ready(function() {
       }
     else if ($(this).val() == 'no')
       {
-        $('#TransForm').fadeOut();
+		  $('#box').animate({width: 0});
+        $('#TransForm').fadeOut('fast');
         $('#bar1').animate({width: 0});
       }
   });

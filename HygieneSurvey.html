@@ -36,7 +36,25 @@
   <h1>Personal Upkeep</h1>
   <h3>Check what you'd like to include on your schedule ~ [Date]</h3>
   
+  <!--Bootstrap Progress Bar-->    
+    <h4 id = "yourday">Your Day</h4><div class="progress">
+      <div class="progress-bar progress-bar-striped active" id = "bar1" style="width: 0%">
+        <span class="sr-only">35% Complete</span>
+      </div>
+      <div class="progress-bar progress-bar-warning progress-bar-striped active" id = "bar2" style="width: 0%">
+        <span class="sr-only">20% Complete</span>
+      </div>
+      <div class="progress-bar progress-bar-danger progress-bar-striped active" id = "bar3" style="width: 0%">
+        <span class="sr-only">10% Complete (danger)</span>
+  </div>
+  <div class="progress-bar progress-bar-success progress-bar-striped active" id = "bar4" style="width: 0%">
+        <span class="sr-only">10% Complete</span>
+  </div>
+</div>
+  <br>
   <!--Yes/No-->
+  <div id ="box">
+  <br>
   <form>
     <h4>Hygiene</h4>
     <input type="radio" name = "Hygiene" value="yes" id = "yesHygiene" checked>Yes
@@ -104,24 +122,13 @@
     <p></p>
   </form>
   
-<!--Bootstrap Progress Bar-->    
-    <h4 id = "yourday">Your Day</h4><div class="progress">
-      <div class="progress-bar progress-bar-striped active" id = "bar1" style="width: 0%">
-        <span class="sr-only">35% Complete</span>
-      </div>
-      <div class="progress-bar progress-bar-warning progress-bar-striped active" id = "bar2" style="width: 0%">
-        <span class="sr-only">20% Complete</span>
-      </div>
-      <div class="progress-bar progress-bar-danger progress-bar-striped active" id = "bar3" style="width: 0%">
-        <span class="sr-only">10% Complete (danger)</span>
-  </div>
-  <div class="progress-bar progress-bar-success progress-bar-striped active" id = "bar4" style="width: 0%">
-        <span class="sr-only">10% Complete</span>
-  </div>
-</div>
+
   
     <form id = "taskFormSelect"></form>
     <form id = "taskFormInputs"></form>
+	
+	<br><br>
+	</div>
 <div class="container">
 <input type="submit" value="Submit">
 </div>

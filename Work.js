@@ -5,6 +5,7 @@ $('#DoYouKnowForm').hide();
 $('#SelectForm').hide();
 $('#InputForm').hide();
 $('#IdkForm').hide();
+$('#box').hide();
   
   $('#DoYouKnowForm').append('<h4>Do you know your work schedule?</h4><input type="radio" name = "idkWork" value="yes">Yes  <input type="radio" name = "idkWork" value="no">No<br>');
   
@@ -44,16 +45,19 @@ $('#IdkForm').hide();
     {
       $('#DoYouKnowForm').fadeOut();
       $('#SelectForm').fadeOut();
-      $('#InputForm').fadeOut();
-      $('#IdkForm').fadeOut();
+      $('#InputForm').fadeOut('fast');
+      $('#IdkForm').fadeOut('fast');
+	  $('#box').animate({width: 0});
       for (var r= 0; r<=10; r++)
       {
        $('#bar'+r).fadeOut();
       }
     }
     else if (yesOrNo == 'yes')
-     {
-        $('#DoYouKnowForm').fadeIn();
+	{
+		$('#box').show();
+		 $('#box').animate({width: 700});
+        $('#DoYouKnowForm').fadeIn('fast');
         $('input[name=idkWork]').prop('checked',false);
      }
   });
