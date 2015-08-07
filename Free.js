@@ -34,8 +34,11 @@ $('#activities2to20').hide();
     var yesOrNo = $('input[name=FreeTime]:checked').val();
     if (yesOrNo == 'no')
     {
-      $('#ActivitySelect').fadeOut();
-      $('#ActivityInputs').fadeOut();
+		$('#whitebox').animate({width: 0});
+      $('#ActivitySelect').fadeOut('fast');
+      $('#ActivityInputs').fadeOut('fast');
+	  //$('#whitebox').fadeOut('fast');
+	  //$('#whitebox').animate({width: 0});
       for (var p = 1; p<=20; p++)
         {
          $("#abar"+p).animate({width: 0});
@@ -43,8 +46,11 @@ $('#activities2to20').hide();
     }
     else if (yesOrNo == 'yes')
      {
-        $('#ActivitySelect').fadeIn();
-        $('#ActivityInputs').fadeIn();
+		 $('#whitebox').animate({width: 1100});
+        $('#ActivitySelect').fadeIn('fast');
+        $('#ActivityInputs').fadeIn('fast');
+		//$('#whitebox').fadeIn('fast');
+		//$('#whitebox').animate({width: 1100});
        
        var num = $('#Actnums').val(); 
        for(var e = 20; e>num; e--)
