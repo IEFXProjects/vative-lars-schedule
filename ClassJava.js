@@ -90,6 +90,7 @@ $('#IdkForm').hide();
     var yesOrNo = $('input[name=Work]:checked').val();
     if (yesOrNo == 'no')
     {
+		$('#box').animate({width: 0});
       $('#DoYouKnowForm').fadeOut();
       $('#SelectForm').fadeOut();
       $('#InputForm').fadeOut();
@@ -101,6 +102,7 @@ $('#IdkForm').hide();
     }
     else if (yesOrNo == 'yes')
      {
+		 $('#box').animate({width: 700});
         $('#DoYouKnowForm').fadeIn();
         $('input[name=idkWork]').prop('checked',false);
      }

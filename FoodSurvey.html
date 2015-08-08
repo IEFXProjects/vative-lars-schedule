@@ -35,7 +35,25 @@
      
   <h2>Specify which meals you eat.</h2>
       
-  
+  <!--Bootstrap Progress Bar-->  
+    
+    <h4 id = "yourweek">Your Day</h4><div class="progress">
+      <div class="progress-bar progress-bar-striped active" id = "bar1" style="width: 0%">
+        <span class="sr-only">35% Complete</span>
+      </div> 
+      <div class="progress-bar progress-bar-warning progress-bar-striped active" id = "bar2" style="width: 0%">
+        <span class="sr-only">20% Complete</span>
+      </div>
+      <div class="progress-bar progress-bar-danger progress-bar-striped active" id = "bar3" style="width: 0%">
+        <span class="sr-only">10% Complete (danger)</span>
+  </div>
+  <div class="progress-bar progress-bar-success progress-bar-striped active" id = "bar4" style="width: 0%">
+        <span class="sr-only">10% Complete</span>
+  </div>
+  </div>
+  <br>
+  <div id = "box">
+  <br>
   <!--Yes/No-->
   <form>
     <h4>Breakfast</h4>
@@ -60,7 +78,7 @@
     </form>
       
   <!--Input-->
-    <div class="col-md-6">
+    <div>
   <h2 id = "timeSpent" class="right">How much time a day do you spend on:</h2>
   
   <form method="POST" action="Meals.php" id = "breakfastForm">    
@@ -71,7 +89,7 @@
       <option selected="selected">Minute(s)</option>
       <option>Hour(s)</option>
     </select>
-<input type="submit" name="submit" value="submit">
+
     <p></p>
   </form>
   
@@ -83,7 +101,7 @@
       <option selected="selected">Minute(s)</option>
       <option>Hour(s)</option>
     </select>
-<input type="submit" name="submit" value="submit">
+
     <p></p>
   </form>
     
@@ -95,36 +113,22 @@
       <option selected="selected">Minute(s)</option>
       <option>Hour(s)</option>
     </select>
-	<input type="submit" name="submit" value="submit">
-    <p></p>
+	
     <br>
      <br>
     </form>
     </div>
      
-    
-<!--Bootstrap Progress Bar-->  
-    
-    <h4 id = "yourweek"></h4><div class="progress">
-      <div class="progress-bar progress-bar-striped active" id = "bar1" style="width: 0%">
-        <span class="sr-only">35% Complete</span>
-      </div> 
-      <div class="progress-bar progress-bar-warning progress-bar-striped active" id = "bar2" style="width: 0%">
-        <span class="sr-only">20% Complete</span>
-      </div>
-      <div class="progress-bar progress-bar-danger progress-bar-striped active" id = "bar3" style="width: 0%">
-        <span class="sr-only">10% Complete (danger)</span>
-  </div>
-  <div class="progress-bar progress-bar-success progress-bar-striped active" id = "bar4" style="width: 0%">
-        <span class="sr-only">10% Complete</span>
-  </div>
-
      
     <form id = "snackSelect"></form>
     <form id = "snackInputs"></form>
-     </div>
-     
-
+	<br><br>
+	 </div>
+	 
+	 
+	 
+	 <div class="submit">
 <input type="submit" value="submit">
+</div>
 </body>
 </html>
